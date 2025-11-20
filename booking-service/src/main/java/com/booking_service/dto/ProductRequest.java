@@ -1,4 +1,4 @@
-package com.payment_service.dto;
+package com.booking_service.dto;
 
 public class ProductRequest {
 

@@ -41,8 +41,8 @@ public class StripeService {
         //creating new session with line item
         SessionCreateParams params=SessionCreateParams.builder()
                 .setMode(SessionCreateParams.Mode.PAYMENT)
-                .setSuccessUrl("http://localhost:8080/success")
-                .setCancelUrl("http://localhost:8080/cancel")
+                .setSuccessUrl("http://localhost:5555/product/v1/success?session_id={CHECKOUT_SESSION_ID}&bookingId="+productRequest.getBookingId())
+                .setCancelUrl("http://localhost:5555/cancel")
                 .addLineItem(lineItem)
                 .build();
 
